@@ -36,6 +36,7 @@ const pizza = [
   },
   {
     flavor: 'pineapple',
+    flavorKey: 'pineapple',
     location: 'Hawaii',
     locationKey: 'hawaii',
     image: '/static/img/pineapple.jpg',
