@@ -2,3 +2,10 @@
   This view should only display one pizza, with flavor, location, and picture.
 -->
 
+<h1> this comes from the pizza-single page. and yes, we made it</h1>
+
+<% for (let i = 0; i < pizza.length; i++) { %>
+	  <p><%= JSON.stringify(pizza[i].flavor) %> </p>
+	  <p><%= JSON.stringify(pizza[i].location) %> </p>
+	  <img src='<%= pizza[i].image %>' >
+	<% } %>
