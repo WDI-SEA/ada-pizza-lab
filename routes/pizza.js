@@ -16,7 +16,7 @@ pizzaRoute.get("/", function(req,res){
 
 pizzaRoute.get("/:id", function(req,res){
 	let id = req.params.id;
-	console.log("req.params.id type is ", typeof id);
+	if (!isNaN(req.params.id)) id = parseInt(req.params.id, 10) - 1;
 	res.render("pizza/pizza-single", {pizza: pizza, id: id});
 })
 
