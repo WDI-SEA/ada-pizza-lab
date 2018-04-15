@@ -1,4 +1,26 @@
-<!--
-  This view should only display one pizza, with flavor, location, and picture.
--->
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Ada's Pizza - Pizza-Single</title>
+  </head>
+  <body>
+  	<% if (pizza[id]) { %>
+		<div>
+  			<h1><%= pizza[id].flavor %></h1>
+  			<h3><%= pizza[id].location %></h3>
+  			<img src="<%= pizza[id].image %>">
+  		</div>
+  	<% } else { %>
+	  	<% pizza.forEach(pie => { %>
+	  		<% if (pie.flavorKey === id || pie.locationKey === id){ %>
+	  		<div>
+	  			<h1><%= pie.flavor %></h1>
+	  			<h3><%= pie.location %></h3>
+	  			<img src="<%= pie.image %>">
+	  		</div>
+	  		<% } %>
+	  	<% }) %>
+  	<% } %>
+  </body>
+</html>
