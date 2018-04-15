@@ -6,6 +6,12 @@
   </head>
   <body>
   	<h1>index.ejs</h1>
-  	<p><%= pizza %></p>
+  	<% pizza.forEach(pie => { %>
+  		<div>
+  			<h1><%= pie.flavor %></h1>
+  			<h3><%= pie.location %></h3>
+  			<img src="<%= pie.image %>">
+  		</div>
+  	<% }) %>
   </body>
 </html>

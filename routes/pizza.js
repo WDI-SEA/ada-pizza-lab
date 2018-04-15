@@ -15,7 +15,8 @@ pizzaRoute.get("/", function(req,res){
 })
 
 pizzaRoute.get("/:id", function(req,res){
-	let id = Number(req.params.id) + 1;
+	let id = req.params.id;
+	console.log("req.params.id type is ", typeof id);
 	res.render("pizza/pizza-single", {pizza: pizza, id: id});
 })
 
