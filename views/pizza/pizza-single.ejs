@@ -12,8 +12,11 @@
 </head>
 <body>
 	
+
 	<% for (let i = 0; i <pizza.length; i++) { %>
-		<p><%= pizza[i].flavor %><p>
+		<p><%=JSON.stringfy.pizza[i].flavor %></p>
+		<p><%=JSON.stringfy.pizza[i].location %></p>
+		<img src= '<%=pizza[i].image%>' >
 	<% } %>
 	
 	<script type="text/javascript" src="js/app.js"></script>

@@ -8,10 +8,10 @@
 </head>
 <body>
 	<h1>Ada's Pizza</h1>
-	<% for (let i = 0; i <pizzaArray.length; i++) { %>
-		<h2><%= pizzaArray[i] %></h2>
+	<% for (let i = 0; i <pizza.length; i++) { %>
+		<p><%=JSON.stringify(pizza[i].flavor) %></p>
+		<p><%=JSON.stringify(pizza[i].location) %></p>
+		<img src= '<%=pizza[i].image%>' >
 	<% } %>
-
-	<script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>

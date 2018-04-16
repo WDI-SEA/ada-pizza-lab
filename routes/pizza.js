@@ -10,9 +10,12 @@ pizzaRoute.get('/pizza', function(req, res) {
 	res.render('./pizza/pizza-index', {pizza: pizza});
 });
 
-//rending single pizza
-pizzaRoute.get('/pizza/:id', function (req, res) {
-	res.render('./pizza/pizza-single', {pizza: pizza});
+pizzaRoute.get("/pizza/:flavorKey", function (req, res) {
+	let pizzaId = pizza.filter((object) => {
+	if(object.flavorKey === req.params.flavorKey) {
+ 		return object
+	}});
+	res.render('./pizza/pizza-single', {pizza: pizzaId});
 });
 
 module.exports = pizzaRoute;
