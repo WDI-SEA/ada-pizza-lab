@@ -18,10 +18,10 @@ app.set('view engine', 'ejs');
 app.use(logger('dev'));
 app.use('/static', express.static(path.join(__dirname, 'public')));
 
-
-app.get("/sample", function(req,res){
-	// here's a sample route
-})
+// use route to index
+app.use('/', require('./routes/index'));
+// use route to pizza
+app.use('/pizza', require('./routes/pizza'));
 
 /* error handler */
 app.get('*', function(req, res) {
