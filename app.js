@@ -3,7 +3,8 @@ const express = require('express');
 const path = require('path');
 const logger = require('morgan');
 const app = express();
-
+const indexRoute = require('./routes/index');
+const pizzaRoute = require('./routes/pizza');
 /* setting up port & listen */
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, function() {
@@ -19,9 +20,11 @@ app.use(logger('dev'));
 app.use('/static', express.static(path.join(__dirname, 'public')));
 
 
-app.get("/sample", function(req,res){
-	// here's a sample route
-})
+// app.get("/sample", function(req,res){
+// 	// here's a sample route
+// })
+app.use('/', indexRoute);
+app.use('/', pizzaRoute);
 
 /* error handler */
 app.get('*', function(req, res) {
