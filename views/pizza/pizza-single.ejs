@@ -1,4 +1,22 @@
 <!--
   This view should only display one pizza, with flavor, location, and picture.
 -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ABC</title>
+</head>
+<body>
 
+	<h1>This is rendering from the pizza-single.ejs</h1>
+
+	<!-- <p><%= JSON.stringify(pizza) %></p> -->
+
+	<% for (let i = 0; i < pizza.length; i++){ %>
+		<p><%= JSON.stringify(pizza[i].flavor) %> </p> 
+		<p><%= JSON.stringify(pizza[i].location) %> </p>
+		<img src='<%= pizza[i].image %>' >
+		<% } %>
+
+</body>
+</html>
