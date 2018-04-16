@@ -15,11 +15,11 @@ const pizzaRoute = express.Router();
 
 const pizza = require('../db/pizza.js');
 
-pizzaRoute.get(('/pizza'), (req, res) => {
+pizzaRoute.get(('/'), (req, res) => {
      res.render('./pizza/pizza-index', {pizza:pizza})
      });
 
-pizzaRoute.get('/pizza/:flavorKey', (req, res)=>{
+pizzaRoute.get('/:flavorKey', (req, res)=>{
 	const pizzaFilter = pizza.filter((element)=>{
 		if(element.flavorKey == req.params.flavorKey) {
 			return element;
