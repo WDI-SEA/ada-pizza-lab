@@ -2,3 +2,22 @@
   - have a list of every pizza flavor
   - the pizza flavors should also have the location and the picture
 --> 
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>From pizza-index.ejs file</h1>
+
+
+<% for(let i = 0; i < pizza.length; i++) { %>
+	<p><%= JSON.stringify(pizza[i].flavor) %></p>
+	<p><%= JSON.stringify(pizza[i].location) %></p>
+	<img src = '<%= pizza[i].image %>' >
+<% } %>
+
+
+</body>
+</html>
