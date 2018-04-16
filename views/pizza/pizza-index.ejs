@@ -1,4 +1,17 @@
-<!-- When rendered in the browser, the /pizza view should:
-  - have a list of every pizza flavor
-  - the pizza flavors should also have the location and the picture
---> 
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Express</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+</head>
+<body>
+	<h1>Ada's Pizza</h1>
+	<% for (let i = 0; i <pizza.length; i++) { %>
+		<p><%=JSON.stringify(pizza[i].flavor) %></p>
+		<p><%=JSON.stringify(pizza[i].location) %></p>
+		<img src= '<%=pizza[i].image%>' >
+	<% } %>
+</body>
+</html>

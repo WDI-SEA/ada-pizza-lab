@@ -1,13 +1,13 @@
 /* setting up router */
 const express = require('express');
+const app = express();
+const pizza = require('../db/pizza.js');
+//create express object
 const indexRoute = express.Router();
 
 indexRoute.get('/', function(req, res) {
-  res.render('index', {
-    //       | fill in this object!
-    //       V   what should it have?? Maybe run `npm jest` and find out :)
-    data: 'goes here'
-  });
+
+  res.render('index', {pizza: pizza});
 });
 
 module.exports = indexRoute;
