@@ -21,7 +21,7 @@ app.get("/sample", function(req,res){
 	// here's a sample route
 })
 
-/* error handler */
+// /* error handler */
 // app.get('*', function(req, res) {
 //   res.status(404).send({message: 'Oops! Not found.'});
 // });
