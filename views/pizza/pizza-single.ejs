@@ -1,4 +1,23 @@
-<!--
-  This view should only display one pizza, with flavor, location, and picture.
--->
 
+  <!-- This view should only display one pizza, with flavor, location, and picture. -->
+<!-- --> 
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1>This comes from the pizza-single.ejs.</h1>
+
+<% for (let i = 0; i < pizza.length; i++) { %>
+	<p><%= JSON.stringify(pizza[i].flavor) %></p>
+	<p><%= JSON.stringify(pizza[i].location) %></p>
+	<img src='<%= pizza[i].image %>' >
+	<% } %>
+
+</body>
+</html>
+
+<!-- QUESTION: Why do we need to have pizza[i] in the for loop ^ if it's only going to render 1 flavor/location/image according to the variable (filter) we set up in pizza.js? 
